@@ -1,2 +1,1 @@
-# pleb
-Used for private coding sometime
+Repository for all things related to my gaming activities.
