@@ -64,31 +64,7 @@ public class Solver implements SolverInterface {
 					}
 				}
 			}
-			//recursion without item[index] taken
-			/*
-			Solution a = recursion(curr_volume, index + 1, new Solution(sol));
 			
-			//recursion with item[index] taken
-			Solution b = new Solution(sol);
-			//since we are calculating the rest of the tree we dont need to set b[index] to 1
-			if(curr_volume - instance.getWeight(index) >= 0) {
-				b = new Solution(recursion(curr_volume - instance.getWeight(index),
-						index + 1, new Solution(b)));
-			}
-			//set b[index] to 1 in order to compare values of a and b
-			b.set(index, 1);
-			if(!b.isFeasible()){
-				b.set(index, 0);
-			}
-			
-			//save higher value of a and b into cell
-			if(a.getValue() > b.getValue()) {
-				table[curr_volume][index] = new Solution(a);
-			} else {
-				table[curr_volume][index] = new Solution(b);
-			}
-			*/
-
 			for(int i = 0; i < list.size(); i++) {
 				int tmp = list.get(i).get(index);
 				list.get(i).set(index, i);
