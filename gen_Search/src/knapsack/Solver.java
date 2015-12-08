@@ -26,8 +26,11 @@ public class Solver implements SolverInterface {
 		
 		Solution one = onePoint(population);
 		Solution two = twoPoint(population);
-		System.out.println(one.getValue());
-		System.out.println(two.getValue());
+		System.out.println(one);
+		System.out.println(two);
+		
+		Solution three = twoPointCrossover(one, two, 5, 7);
+		System.out.println(three);
 		
 		return population[0];
 	}
@@ -177,7 +180,9 @@ public class Solver implements SolverInterface {
     		if(sol.isFeasible()) {
     			check = true;
     		}
+    		check = true;
     	}
+    	
     	
     	return sol;
     }
