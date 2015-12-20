@@ -5,6 +5,7 @@ import java.util.*;
 public class Main {
 	public static void main(String[] args) {
 		if (args.length == 1) {
+			long currTime = System.currentTimeMillis();
 			File file = new File(args[0]);
 			Scanner in = null;
 			try {
@@ -49,6 +50,7 @@ public class Main {
 			Solver solver = new Solver();
 			
 			ArrayList<Town> solution = new ArrayList<Town>(solver.solve(list, 1, 2));
+			System.out.println(System.currentTimeMillis() - currTime);
 			for(Town t : solution) {
 				System.out.println(t.getId());
 			}
